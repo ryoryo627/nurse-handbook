@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{ super() }}
+
+<div class="issue-report-box">
+  <div class="issue-report-header">
+    <span class="issue-report-icon">&#128221;</span>
+    <span>このページについて</span>
+  </div>
+  <p class="issue-report-text">間違いや改善点を見つけたら教えてください</p>
+  <a href="https://github.com/ryoryo627/nurse-handbook/issues/new?title={{ page.title | urlencode }}についての報告&body=ページ: {{ page.url | urlencode }}%0A%0A【報告内容】%0A"
+     class="issue-report-button"
+     target="_blank"
+     rel="noopener">
+    報告する
+  </a>
+</div>
+{% endblock %}

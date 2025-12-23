@@ -1,10 +1,13 @@
 site_name: 看護管理職ハンドブック
 site_description: 看護主任・師長のための実践ガイド
 site_url: https://ryoryo627.github.io/nurse-handbook/
+repo_url: https://github.com/ryoryo627/nurse-handbook
+repo_name: ryoryo627/nurse-handbook
 
 theme:
   name: material
   language: ja
+  custom_dir: overrides
   features:
     - navigation.sections
     - navigation.top
@@ -15,6 +18,9 @@ theme:
     - scheme: default
       primary: teal
       accent: teal
+
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   - search:
