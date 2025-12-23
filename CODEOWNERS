@@ -1,0 +1,25 @@
+# 看護管理職ハンドブック 責任者設定
+#
+# このファイルは、どのページを誰がレビューするかを決めます。
+# PRを出すと、ここに書いた人に自動で通知が行きます。
+#
+# 書き方: パス パターン → @GitHubユーザー名
+
+# 全体の責任者（すべてのPRを見る）
+* @nursing-education-team
+
+# 事故・安全に関するページ（安全担当が必ずレビュー）
+docs/02_management-os/incident.md @safety-manager
+docs/10_troubles/incident-happened.md @safety-manager
+
+# 苦情に関するページ（患者相談担当がレビュー）
+docs/02_management-os/complaints.md @patient-relations
+docs/10_troubles/complaint-came.md @patient-relations
+
+# 人員に関するページ（人事担当がレビュー）
+docs/02_management-os/staffing.md @hr-manager
+docs/10_troubles/not-enough-people.md @hr-manager
+
+# 教育に関するページ（教育担当がレビュー）
+docs/02_management-os/teaching.md @nursing-education-team
+docs/10_troubles/new-staff.md @nursing-education-team

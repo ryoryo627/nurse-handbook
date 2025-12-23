@@ -1,0 +1,83 @@
+site_name: 看護管理職ハンドブック
+site_description: 看護主任・師長のための実践ガイド
+site_url: https://example.github.io/nurse-handbook/
+
+theme:
+  name: material
+  language: ja
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+  palette:
+    - scheme: default
+      primary: teal
+      accent: teal
+
+plugins:
+  - search:
+      lang: ja
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - はじめに: index.md
+  - はじめる前に:
+    - 00_start/purpose.md
+    - 00_start/how-to-use.md
+    - 00_start/how-to-change.md
+    - 00_start/writing-rules.md
+    - 00_start/owners.md
+    - 00_start/glossary.md
+  - 共通OS:
+    - 01_common-os/index.md
+    - 01_common-os/language.md
+    - 01_common-os/tell.md
+    - 01_common-os/delegate.md
+    - 01_common-os/meeting.md
+    - 01_common-os/notes.md
+  - 管理OS:
+    - 02_management-os/index.md
+    - 02_management-os/staffing.md
+    - 02_management-os/one-on-one.md
+    - 02_management-os/teaching.md
+    - 02_management-os/incident.md
+    - 02_management-os/complaints.md
+    - 02_management-os/numbers.md
+  - 場所別:
+    - 03_by-place/index.md
+    - 03_by-place/inpatient.md
+    - 03_by-place/outpatient.md
+    - 03_by-place/homecare.md
+  - 困ったとき:
+    - 10_troubles/index.md
+    - 10_troubles/not-enough-people.md
+    - 10_troubles/complaint-came.md
+    - 10_troubles/incident-happened.md
+    - 10_troubles/new-staff.md
+  - ステップアップ:
+    - 90_step-up/day0-30.md
+    - 90_step-up/day31-90.md
+    - 90_step-up/day91-365.md
+  - テンプレート:
+    - 99_templates/page.md
+    - 99_templates/meeting.md
+    - 99_templates/decision-log.md
