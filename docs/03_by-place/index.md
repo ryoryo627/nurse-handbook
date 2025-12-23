@@ -22,9 +22,9 @@ last_checked: "2025-12-23"
 
 ## 共通すること
 
-どの場所でも使う基本スキルは[共通OS](../01_common-os/index.md)を見てください。
+どの場所でも使う基本スキルは[仕事の基本](../01_common-os/index.md)を見てください。
 
 ## 関連
 
-- [共通OS](../01_common-os/index.md)
-- [管理OS](../02_management-os/index.md)
+- [仕事の基本](../01_common-os/index.md)
+- [管理の基本](../02_management-os/index.md)

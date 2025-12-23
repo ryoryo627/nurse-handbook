@@ -55,8 +55,8 @@ mkdocs serve
 ```
 docs/
   00_start/     # はじめる前に（使い方、ルール）
-  01_common-os/ # 共通OS（みんなが使うスキル）
-  02_management-os/ # 管理OS（管理職の仕事）
+  01_common-os/ # 仕事の基本（みんなが使うスキル）
+  02_management-os/ # 管理の基本（管理職の仕事）
   03_by-place/  # 場所別（病棟、外来、在宅）
   10_troubles/  # 困ったとき
   90_step-up/   # ステップアップ

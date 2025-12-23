@@ -52,14 +52,14 @@ nav:
     - 00_start/writing-rules.md
     - 00_start/owners.md
     - 00_start/glossary.md
-  - 共通OS:
+  - 仕事の基本:
     - 01_common-os/index.md
     - 01_common-os/language.md
     - 01_common-os/tell.md
     - 01_common-os/delegate.md
     - 01_common-os/meeting.md
     - 01_common-os/notes.md
-  - 管理OS:
+  - 管理の基本:
     - 02_management-os/index.md
     - 02_management-os/staffing.md
     - 02_management-os/one-on-one.md

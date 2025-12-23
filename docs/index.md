@@ -21,7 +21,7 @@ last_checked: "2025-12-23"
 
 1. [このハンドブックの目的](00_start/purpose.md)
 2. [使い方](00_start/how-to-use.md)
-3. [共通OSの全体像](01_common-os/index.md)
+3. [仕事の基本の全体像](01_common-os/index.md)
 
 ### 困っている人
 
