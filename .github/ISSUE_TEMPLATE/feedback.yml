@@ -13,14 +13,6 @@ body:
         - 追加・改善の提案（新しい内容、わかりやすさの改善など）
     validations:
       required: true
-  - type: input
-    id: page
-    attributes:
-      label: ページ
-      description: どのページについてですか？
-      placeholder: 例：人が足りない
-    validations:
-      required: true
   - type: textarea
     id: content
     attributes:
