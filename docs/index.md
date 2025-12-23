@@ -17,22 +17,24 @@ last_checked: "2025-12-23"
 
 ## どこから読む？
 
-### はじめての人
+=== "はじめての人"
 
-1. [このハンドブックの目的](00_start/purpose.md)
-2. [使い方](00_start/how-to-use.md)
-3. [共通OSの全体像](01_common-os/index.md)
+    1. [このハンドブックの目的](00_start/purpose.md)
+    2. [使い方](00_start/how-to-use.md)
+    3. [共通OSの全体像](01_common-os/index.md)
 
-### 困っている人
+=== "困っている人"
 
-- [人が足りない](10_troubles/not-enough-people.md)
-- [苦情が来た](10_troubles/complaint-came.md)
-- [事故が起きた](10_troubles/incident-happened.md)
-- [新人が不安定](10_troubles/new-staff.md)
+    - [人が足りない](10_troubles/not-enough-people.md)
+    - [苦情が来た](10_troubles/complaint-came.md)
+    - [事故が起きた](10_troubles/incident-happened.md)
+    - [新人が不安定](10_troubles/new-staff.md)
 
-### 主任・師長になったばかりの人
+=== "着任直後の人"
 
-- [着任0〜30日](90_step-up/day0-30.md)
+    - [着任0〜30日](90_step-up/day0-30.md)
+    - [着任31〜90日](90_step-up/day31-90.md)
+    - [着任91日〜1年](90_step-up/day91-365.md)
 
 ## 更新情報
 
