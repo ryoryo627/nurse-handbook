@@ -1,3 +1,54 @@
+/* 用語ツールチップ */
+.glossary-tooltip {
+  position: fixed;
+  max-width: 320px;
+  padding: 1rem;
+  background: white;
+  border: 1px solid #009688;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.glossary-tooltip.visible {
+  opacity: 1;
+}
+
+.glossary-tooltip-title {
+  font-weight: 600;
+  color: #00695c;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0f2f1;
+}
+
+.glossary-tooltip-meaning {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.glossary-tooltip-example {
+  color: #666;
+  font-size: 0.85rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid #b2dfdb;
+}
+
+/* 用語リンクのスタイル */
+a[href*="glossary.md#"] {
+  border-bottom: 1px dashed #009688;
+  text-decoration: none;
+}
+
+a[href*="glossary.md#"]:hover {
+  border-bottom-style: solid;
+}
+
 /* Issue報告ボックス - Tealテーマ */
 .issue-report-box {
   margin-top: 3rem;
