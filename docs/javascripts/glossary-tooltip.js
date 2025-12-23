@@ -83,29 +83,33 @@
     }
   }
 
-  // ツールチップを表示
-  function showTooltip(link, data) {
+  // ツールチップの内容を設定
+  function setTooltipContent(data) {
     if (!tooltip) tooltip = createTooltip();
 
     tooltip.querySelector('.glossary-tooltip-title').textContent = data.title;
     tooltip.querySelector('.glossary-tooltip-meaning').textContent = data.meaning || '';
     tooltip.querySelector('.glossary-tooltip-example').textContent = data.example ? `例：${data.example}` : '';
+  }
 
-    // 位置を計算
-    const rect = link.getBoundingClientRect();
-    const tooltipRect = tooltip.getBoundingClientRect();
+  // ツールチップをマウス位置に表示
+  function positionTooltip(e) {
+    if (!tooltip) return;
 
-    let left = rect.left + window.scrollX;
-    let top = rect.bottom + window.scrollY + 8;
+    const offsetX = 15;
+    const offsetY = 15;
 
-    // 画面右端をはみ出す場合は調整
+    let left = e.clientX + offsetX;
+    let top = e.clientY + offsetY;
+
+    // 画面右端をはみ出す場合は左に表示
     if (left + 320 > window.innerWidth) {
-      left = window.innerWidth - 330;
+      left = e.clientX - 320 - offsetX;
     }
 
     // 画面下端をはみ出す場合は上に表示
-    if (rect.bottom + 200 > window.innerHeight) {
-      top = rect.top + window.scrollY - 8;
+    if (top + 150 > window.innerHeight) {
+      top = e.clientY - offsetY;
       tooltip.style.transform = 'translateY(-100%)';
     } else {
       tooltip.style.transform = 'translateY(0)';
@@ -113,7 +117,13 @@
 
     tooltip.style.left = left + 'px';
     tooltip.style.top = top + 'px';
-    tooltip.classList.add('visible');
+  }
+
+  // ツールチップを表示
+  function showTooltip() {
+    if (tooltip) {
+      tooltip.classList.add('visible');
+    }
   }
 
   // ツールチップを非表示
@@ -128,6 +138,10 @@
     const links = document.querySelectorAll('a[href*="glossary"][href*="#"]');
 
     links.forEach(link => {
+      // 既にイベント設定済みならスキップ
+      if (link.dataset.glossaryTooltip) return;
+      link.dataset.glossaryTooltip = 'true';
+
       // アンカーを取得
       const href = link.getAttribute('href');
       const hashIndex = href.indexOf('#');
@@ -135,12 +149,16 @@
 
       const anchor = href.substring(hashIndex + 1);
 
-      link.addEventListener('mouseenter', async () => {
+      link.addEventListener('mouseenter', async (e) => {
         const data = await fetchGlossaryData();
         if (data[anchor]) {
-          showTooltip(link, data[anchor]);
+          setTooltipContent(data[anchor]);
+          positionTooltip(e);
+          showTooltip();
         }
       });
+
+      link.addEventListener('mousemove', positionTooltip);
 
       link.addEventListener('mouseleave', hideTooltip);
     });
