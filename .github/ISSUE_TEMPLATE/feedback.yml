@@ -1,0 +1,48 @@
+name: ご意見・ご報告
+description: 間違いの報告や改善の提案
+title: "[報告] "
+labels: ["content"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 報告の種類
+      description: どのような報告ですか？
+      options:
+        - 間違いの報告（内容の誤り、古い情報など）
+        - 追加・改善の提案（新しい内容、わかりやすさの改善など）
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: ページ
+      description: どのページについてですか？
+      placeholder: 例：人が足りない
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: 内容
+      description: |
+        【間違いの報告の場合】
+        - 現在の記載：○○と書かれている
+        - 正しい内容：実際は△△
+
+        【追加・改善の提案の場合】
+        - どのような追加・改善をしてほしいか
+      placeholder: |
+        例（間違い）：
+        「夜勤は2人以上」と書かれていますが、実際は「3人以上」が正しいです。
+
+        例（提案）：
+        急な欠勤の対応方法について、もっと具体的な手順があると助かります。
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 理由・背景（任意）
+      description: なぜそう思いましたか？
+      placeholder: 規定が変わった、現場でこういうことがあった、など
