@@ -9,11 +9,19 @@
     <span>このページについて</span>
   </div>
   <p class="issue-report-text">間違いや改善点を見つけたら教えてください</p>
-  <a href="https://github.com/ryoryo627/nurse-handbook/issues/new?title={{ page.title | urlencode }}についての報告&body=ページ: {{ page.url | urlencode }}%0A%0A【報告内容】%0A"
-     class="issue-report-button"
-     target="_blank"
-     rel="noopener">
-    報告する
-  </a>
+  <div class="issue-report-buttons">
+    <a href="https://github.com/ryoryo627/nurse-handbook/issues/new?template=mistake.yml&title=[間違い] {{ page.title | urlencode }}"
+       class="issue-report-button issue-report-mistake"
+       target="_blank"
+       rel="noopener">
+      間違いを報告
+    </a>
+    <a href="https://github.com/ryoryo627/nurse-handbook/issues/new?template=addition.yml&title=[提案] {{ page.title | urlencode }}"
+       class="issue-report-button issue-report-addition"
+       target="_blank"
+       rel="noopener">
+      追加・改善を提案
+    </a>
+  </div>
 </div>
 {% endblock %}

@@ -29,18 +29,44 @@
   font-size: 0.9rem;
 }
 
+.issue-report-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .issue-report-button {
   display: inline-block;
-  padding: 0.6rem 1.5rem;
-  background-color: #009688;
+  padding: 0.6rem 1.2rem;
   color: white !important;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 500;
-  transition: background-color 0.2s ease;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
 }
 
 .issue-report-button:hover {
-  background-color: #00796b;
   text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 間違いを報告ボタン */
+.issue-report-mistake {
+  background-color: #00796b;
+}
+
+.issue-report-mistake:hover {
+  background-color: #00695c;
+}
+
+/* 追加・改善を提案ボタン */
+.issue-report-addition {
+  background-color: #009688;
+}
+
+.issue-report-addition:hover {
+  background-color: #00897b;
 }

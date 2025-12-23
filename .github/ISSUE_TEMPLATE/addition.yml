@@ -1,0 +1,36 @@
+name: 追加・改善の提案
+description: 新しい内容の追加や改善を提案する
+title: "[提案] "
+labels: ["enhancement", "content"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 提案の種類
+      options:
+        - 新しいページを追加してほしい
+        - 既存ページに内容を追加してほしい
+        - 説明をもっとわかりやすくしてほしい
+        - その他
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: 関連ページ
+      description: 関連するページがあれば教えてください（任意）
+      placeholder: 例：人が足りない
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案内容
+      description: どのような追加・改善をしてほしいですか？
+      placeholder: こういう内容があると助かります...
+    validations:
+      required: true
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景・理由
+      description: なぜこの追加・改善が必要だと思いますか？（任意）
+      placeholder: 現場でこういうことがあって...

@@ -1,0 +1,35 @@
+name: 間違いの報告
+description: 内容の誤りや古い情報を報告する
+title: "[間違い] "
+labels: ["bug", "content"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: ページ
+      description: どのページで見つけましたか？
+      placeholder: 例：人が足りない
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 現在の記載
+      description: 間違っている部分を引用してください
+      placeholder: 現在このように書かれています...
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: 正しい内容
+      description: どのように修正すべきですか？
+      placeholder: 正しくはこうです...
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 理由・根拠
+      description: なぜ間違いだと分かりましたか？（任意）
+      placeholder: 規定が変わった、実際の運用と違う、など
