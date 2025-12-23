@@ -7,7 +7,6 @@ theme:
   language: ja
   features:
     - navigation.sections
-    - navigation.expand
     - navigation.top
     - search.suggest
     - search.highlight
