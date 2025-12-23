@@ -53,20 +53,13 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* 間違いを報告ボタン */
-.issue-report-mistake {
-  background-color: #00796b;
-}
-
-.issue-report-mistake:hover {
-  background-color: #00695c;
-}
-
-/* 追加・改善を提案ボタン */
+/* ボタン共通色 - Teal */
+.issue-report-mistake,
 .issue-report-addition {
   background-color: #009688;
 }
 
+.issue-report-mistake:hover,
 .issue-report-addition:hover {
   background-color: #00897b;
 }
